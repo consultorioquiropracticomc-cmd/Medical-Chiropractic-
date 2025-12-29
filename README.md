@@ -1,2 +1,2 @@
 # Medical-Chiropractic-
-pagina web para consultorio quiropráctico 
+ALIVIA TU DOLOR, RESTAURA TU BIENESTAR
