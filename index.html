@@ -2,129 +2,157 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Medical Chiropractic</title>
-  <meta name="description" content="Medical Chiropractic – Consultorio quiropráctico profesional enfocado en corrección, alivio del dolor y prevención." />
+  <title>Medical Chiropractic | Atención Quiropráctica Profesional</title>
+  <meta name="description" content="Medical Chiropractic en Chimalhuacán. Atención quiropráctica profesional, valoración, planes correctivos, sintomáticos y preventivos." />
   <style>
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
+      background-color: #ffffff;
       color: #1f2933;
-      background-color: #f9fafb;
     }
     header {
-      background: linear-gradient(135deg, #0ea5e9, #22c55e);
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
+      background-color: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
     header h1 {
+      font-size: 1.2rem;
+      color: #0ea5e9;
       margin: 0;
-      font-size: 2.5rem;
     }
-    header p {
+    header a {
+      background-color: #22c55e;
+      color: #0f172a;
+      padding: 10px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 20px;
+      background-color: #f9fafb;
+    }
+    .hero-text {
+      max-width: 500px;
+    }
+    .hero-text h2 {
+      font-size: 2.2rem;
+      color: #0f172a;
+    }
+    .hero-text p {
       font-size: 1.1rem;
-      margin-top: 10px;
+      margin: 20px 0;
+    }
+    .hero-text a {
+      display: inline-block;
+      background-color: #0ea5e9;
+      color: white;
+      padding: 14px 26px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
     }
     section {
-      padding: 40px 20px;
-      max-width: 1000px;
+      padding: 60px 20px;
+      max-width: 1100px;
       margin: auto;
     }
-    h2 {
-      color: #0f172a;
-      margin-bottom: 20px;
+    h3 {
+      text-align: center;
+      font-size: 1.8rem;
+      margin-bottom: 40px;
     }
-    .services {
+    .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
     }
     .card {
-      background: white;
+      border: 1px solid #e5e7eb;
       border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      padding: 25px;
+      text-align: center;
     }
-    .card h3 {
-      margin-top: 0;
+    .card h4 {
       color: #0ea5e9;
+      margin-bottom: 10px;
+    }
+    .trust {
+      background-color: #f1f5f9;
+      text-align: center;
+    }
+    .trust p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.05rem;
     }
     .cta {
       background-color: #0f172a;
       color: white;
       text-align: center;
-      padding: 40px 20px;
+      padding: 60px 20px;
     }
     .cta a {
-      display: inline-block;
-      margin-top: 20px;
       background-color: #22c55e;
       color: #0f172a;
-      padding: 12px 24px;
-      border-radius: 8px;
+      padding: 14px 28px;
+      border-radius: 10px;
       text-decoration: none;
       font-weight: bold;
+      display: inline-block;
+      margin-top: 20px;
     }
     footer {
       background-color: #020617;
       color: #cbd5f5;
       text-align: center;
-      padding: 20px;
+      padding: 25px 15px;
       font-size: 0.9rem;
     }
   </style>
 </head>
-<body>  <header>
-    <h1>Medical Chiropractic</h1>
-    <p>Cuidamos tu columna, mejoramos tu calidad de vida en Chimalhuacán</p>
-  </header>  <section>
-    <h2>¿Quiénes somos?</h2>
-    <p>
-      En <strong>Medical Chiropractic</strong> somos un consultorio quiropráctico ubicado en <strong>Chimalhuacán, Estado de México</strong>. Brindamos atención profesional, ética y personalizada, enfocada en aliviar el dolor, corregir la causa del problema y prevenir recaídas.
-    </p>
-    <p>
-      Nuestro equipo está conformado por profesionales licenciados en quiropráctica, comprometidos con tu salud y bienestar.
-    </p>
-    <p>
-      <strong>Dr. Ivan Mora Franco</strong> – Licenciado en Quiropráctica<br/>
-      <strong>Dra. Berenice Jaqueline Ortega Copado</strong> – Licenciada en Quiropráctica
-    </p>
-  </section>  <section>
-    <h2>Servicios</h2>
-    <div class="services">
-      <div class="card">
-        <h3>Plan Correctivo</h3>
-        <p>Tratamiento intensivo enfocado en corregir desalineaciones y restaurar la función normal de la columna.</p>
-      </div>
-      <div class="card">
-        <h3>Plan Sintomático</h3>
-        <p>Ideal para aliviar dolor y molestias musculoesqueléticas de forma segura y efectiva.</p>
-      </div>
-      <div class="card">
-        <h3>Plan Preventivo</h3>
-        <p>Mantenimiento quiropráctico para conservar una columna sana y evitar recaídas.</p>
-      </div>
-      <div class="card">
-        <h3>Fisioterapia y Rehabilitación</h3>
-        <p>Apoyo terapéutico con técnicas físicas para acelerar la recuperación.</p>
-      </div>
-    </div>
-  </section>  <section>
-    <h2>¿Por qué elegirnos?</h2>
-    <ul>
-      <li>Atención profesional y humana</li>
-      <li>Tratamientos personalizados</li>
-      <li>Enfoque integral en tu salud</li>
-      <li>Experiencia en cuidado de columna y sistema nervioso</li>
-    </ul>
-  </section>  <section class="cta">
-    <h2>Agenda tu cita hoy</h2>
-    <p>Atención con cita previa en Chimalhuacán, Estado de México.</p>
-    <a href="https://wa.me/5215623633940" target="_blank">Agendar por WhatsApp</a>
-  </section>  <footer>
-    <p>📍 C. Amapola Manzana 061, Villa Los Colorines, 56343 Chimalhuacán, Méx.</p>
-    <p>📞 WhatsApp: 56 23 63 39 40</p>
-    <p>© 2025 Medical Chiropractic | Todos los derechos reservados</p>
-  </footer></body>
+<body><header>
+  <h1>Medical Chiropractic</h1>
+  <a href="https://wa.me/5215623633940?text=Hola,%20quiero%20agendar%20una%20valoración%20quiropráctica%20en%20Medical%20Chiropractic" target="_blank">Agendar cita</a>
+</header><section class="hero">
+  <div class="hero-text">
+    <h2>Atención quiropráctica profesional en Chimalhuacán</h2>
+    <p>Valoración, diagnóstico y tratamiento por licenciados en quiropráctica. Atención ética, segura y personalizada.</p>
+    <a href="https://wa.me/5215623633940?text=Hola,%20quiero%20agendar%20una%20valoración%20quiropráctica%20en%20Medical%20Chiropractic" target="_blank">Agendar por WhatsApp</a>
+  </div>
+</section><section>
+  <h3>Nuestros servicios</h3>
+  <div class="cards">
+    <div class="card"><h4>Valoración Quiropráctica</h4><p>Evaluación profesional para identificar el origen del problema.</p></div>
+    <div class="card"><h4>Plan Correctivo</h4><p>Corrección de desalineaciones y restauración funcional.</p></div>
+    <div class="card"><h4>Plan Sintomático</h4><p>Alivio de dolor y molestias musculoesqueléticas.</p></div>
+    <div class="card"><h4>Plan Preventivo</h4><p>Mantenimiento de la salud de tu columna.</p></div>
+    <div class="card"><h4>Fisioterapia</h4><p>Apoyo terapéutico para acelerar la recuperación.</p></div>
+  </div>
+</section><section class="trust">
+  <h3>Confianza y profesionalismo</h3>
+  <p>
+    Atención por <strong>Dr. Ivan Mora Franco</strong> y <strong>Dra. Berenice Jaqueline Ortega Copado</strong>,
+    licenciados en quiropráctica. Nuestro objetivo es mejorar tu calidad de vida con un enfoque clínico, humano y responsable.
+  </p>
+</section><section class="cta">
+  <h3>Agenda tu valoración hoy</h3>
+  <p>Da el primer paso hacia una vida con menos dolor y mayor bienestar.</p>
+  <a href="https://wa.me/5215623633940?text=Hola,%20quiero%20agendar%20una%20valoración%20quiropráctica%20en%20Medical%20Chiropractic" target="_blank">Agendar cita</a>
+</section><footer>
+  <p>📍 C. Amapola Manzana 061, Villa Los Colorines, 56343 Chimalhuacán, Méx.</p>
+  <p>📞 WhatsApp: 56 23 63 39 40</p>
+  <p>© 2025 Medical Chiropractic</p>
+</footer></body>
 </html>
