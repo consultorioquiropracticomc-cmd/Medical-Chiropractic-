@@ -236,6 +236,117 @@
       .hero h1 { font-size: 1.8rem; }
       .cards { grid-template-columns: 1fr; }
     }
+
+
+    /* === ULTRA NIVEL - estilos del carrusel (agregados) === */
+    .benefit-carousel {
+      background: rgba(255,255,255,0.75);
+      backdrop-filter: blur(10px);
+      border-radius: 24px;
+      padding: 30px 10px 40px;
+      box-shadow: 0 20px 40px rgba(0,0,0,.15);
+      max-width: 900px;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    .benefit-track {
+      display: flex;
+      transition: transform 0.6s ease;
+      will-change: transform;
+    }
+
+    .benefit-slide {
+      min-width: 100%;
+      padding: 24px 28px;
+      text-align: center;
+      opacity: 0;
+      transform: scale(0.96);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+
+    .benefit-slide.active {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .benefit-slide span {
+      font-size: 44px;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    .benefit-slide h3 {
+      color: #0ea5e9;
+      margin: 8px 0 10px;
+      font-size: 1.25rem;
+    }
+
+    .benefit-slide p {
+      max-width: 520px;
+      margin: 0 auto 10px;
+      line-height: 1.6;
+      color: #07243a;
+    }
+
+    .benefit-cta {
+      display: inline-block;
+      margin-top: 14px;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      color: #0f172a;
+      padding: 10px 22px;
+      border-radius: 999px;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: .95rem;
+    }
+
+    .benefit-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(14,165,233,.95);
+      color: #fff;
+      border: none;
+      font-size: 26px;
+      padding: 8px 14px;
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 30;
+      box-shadow: 0 8px 18px rgba(3,37,65,.12);
+    }
+
+    .benefit-btn.prev { left: 12px; }
+    .benefit-btn.next { right: 12px; }
+
+    .benefit-dots {
+      text-align: center;
+      margin-top: 18px;
+    }
+
+    .benefit-dots span {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background: #cbd5e1;
+      margin: 6px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: transform .18s ease;
+    }
+
+    .benefit-dots .active {
+      background: #0ea5e9;
+      transform: scale(1.15);
+    }
+
+    @media(max-width:600px){
+      .benefit-btn { display:none; }
+      .benefit-slide p { padding: 0 6px; }
+      .benefit-carousel { padding: 18px 8px 26px; border-radius: 16px; }
+    }
+    /* === fin ULTRA NIVEL === */
+
   </style>
 </head>
 
@@ -281,15 +392,66 @@
   </div>
 </section>
 
+<!-- ==== SECCIÓN BENEFICIOS REEMPLAZADA POR CARRUSEL ULTRA NIVEL ==== -->
 <section id="beneficios" class="benefits">
   <h2>Beneficios de la Quiropráctica</h2>
-  <ul>
-    <li>✔️ Alivio de dolor de espalda, cuello y articulaciones</li>
-    <li>✔️ Mejora de postura y movilidad</li>
-    <li>✔️ Corrección de desalineaciones</li>
-    <li>✔️ Atención personalizada y segura</li>
-  </ul>
+
+  <div class="benefit-carousel" aria-roledescription="carousel">
+    <div class="benefit-track" role="list">
+
+      <div class="benefit-slide active" role="listitem" aria-hidden="false">
+        <span>🦴</span>
+        <h3>Alivio del Dolor</h3>
+        <p>Reduce dolor de espalda, cuello, columna y articulaciones de forma natural.</p>
+        <a class="benefit-cta"
+           href="https://wa.me/5215623633940?text=Hola,%20quiero%20una%20valoración%20quiropráctica"
+           target="_blank" rel="noopener">
+           Agenda tu valoración
+        </a>
+      </div>
+
+      <div class="benefit-slide" role="listitem" aria-hidden="true">
+        <span>🧠</span>
+        <h3>Sistema Nervioso</h3>
+        <p>Mejora la comunicación entre cerebro y cuerpo para un mejor funcionamiento.</p>
+        <a class="benefit-cta"
+           href="https://wa.me/5215623633940?text=Hola,%20quiero%20una%20valoración%20quiropráctica"
+           target="_blank" rel="noopener">
+           Agenda tu valoración
+        </a>
+      </div>
+
+      <div class="benefit-slide" role="listitem" aria-hidden="true">
+        <span>🤸‍♂️</span>
+        <h3>Movilidad y Postura</h3>
+        <p>Aumenta flexibilidad, corrige postura y reduce rigidez articular.</p>
+        <a class="benefit-cta"
+           href="https://wa.me/5215623633940?text=Hola,%20quiero%20una%20valoración%20quiropráctica"
+           target="_blank" rel="noopener">
+           Agenda tu valoración
+        </a>
+      </div>
+
+      <div class="benefit-slide" role="listitem" aria-hidden="true">
+        <span>💪</span>
+        <h3>Prevención</h3>
+        <p>Evita recaídas, lesiones repetitivas y sobrecargas musculares.</p>
+        <a class="benefit-cta"
+           href="https://wa.me/5215623633940?text=Hola,%20quiero%20una%20valoración%20quiropráctica"
+           target="_blank" rel="noopener">
+           Agenda tu valoración
+        </a>
+      </div>
+
+    </div>
+
+    <button class="benefit-btn prev" aria-label="Anterior">‹</button>
+    <button class="benefit-btn next" aria-label="Siguiente">›</button>
+
+    <div class="benefit-dots" role="tablist" aria-label="Indicadores del carrusel"></div>
+  </div>
 </section>
+<!-- ==== fin sección beneficios ==== -->
 
 <section id="ubicacion" style="padding:40px; background:#f8fafc;">
   <h2>📍 ubicación 🇲🇽</h2>
@@ -338,6 +500,114 @@
   function toggleMenu() {
     document.getElementById("menu").classList.toggle("active");
   }
+</script>
+
+<!-- === JS ULTRA NIVEL DEL CARRUSEL: fade + slide + swipe + pausa === -->
+<script>
+  (function(){
+    const track = document.querySelector('.benefit-track');
+    const slides = Array.from(document.querySelectorAll('.benefit-slide'));
+    const prevBtn = document.querySelector('.benefit-btn.prev');
+    const nextBtn = document.querySelector('.benefit-btn.next');
+    const dotsContainer = document.querySelector('.benefit-dots');
+
+    if(!track || slides.length === 0) return;
+
+    let index = 0;
+    let startX = 0;
+    let autoSlide;
+
+    // Crear dots
+    slides.forEach((_, i) => {
+      const dot = document.createElement('span');
+      dot.setAttribute('role','button');
+      dot.setAttribute('aria-label','Ir al slide ' + (i+1));
+      if (i === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => goTo(i));
+      dotsContainer.appendChild(dot);
+    });
+
+    const dots = Array.from(dotsContainer.querySelectorAll('span'));
+
+    function updateAria() {
+      slides.forEach((s, i) => {
+        s.setAttribute('aria-hidden', i === index ? 'false' : 'true');
+      });
+    }
+
+    function goTo(i) {
+      // quitar active anterior
+      slides[index].classList.remove('active');
+      dots[index].classList.remove('active');
+
+      index = i;
+
+      // mover track
+      track.style.transform = `translateX(-${index * 100}%)`;
+
+      // activar actual
+      slides[index].classList.add('active');
+      dots[index].classList.add('active');
+
+      updateAria();
+    }
+
+    nextBtn.addEventListener('click', () => goTo((index + 1) % slides.length));
+    prevBtn.addEventListener('click', () => goTo((index - 1 + slides.length) % slides.length));
+
+    function startAuto(){
+      stopAuto();
+      autoSlide = setInterval(() => {
+        nextBtn.click();
+      }, 5000);
+    }
+
+    function stopAuto(){
+      if (autoSlide) clearInterval(autoSlide);
+    }
+
+    // pausa on hover (desktop)
+    track.addEventListener('mouseenter', stopAuto);
+    track.addEventListener('mouseleave', startAuto);
+
+    // swipe touch
+    track.addEventListener('touchstart', e => {
+      stopAuto();
+      startX = e.touches[0].clientX;
+    }, {passive: true});
+
+    track.addEventListener('touchend', e => {
+      const endX = e.changedTouches[0].clientX;
+      if (startX - endX > 50) nextBtn.click();
+      if (endX - startX > 50) prevBtn.click();
+      startAuto();
+    });
+
+    // incia autoslide
+    startAuto();
+
+    // mejora: paused when user focuses any CTA inside slide
+    const ctas = document.querySelectorAll('.benefit-cta');
+    ctas.forEach(cta => {
+      cta.addEventListener('focus', stopAuto);
+      cta.addEventListener('blur', startAuto);
+      cta.addEventListener('mouseenter', stopAuto);
+      cta.addEventListener('mouseleave', startAuto);
+    });
+
+    // ensure initial state
+    track.style.transform = `translateX(0)`;
+    slides.forEach((s, i) => {
+      if(i === 0) {
+        s.classList.add('active');
+        s.setAttribute('aria-hidden','false');
+      } else {
+        s.classList.remove('active');
+        s.setAttribute('aria-hidden','true');
+      }
+    });
+
+  })();
 </script>
 
 </body>
