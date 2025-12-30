@@ -2,130 +2,198 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Medical Chiropractic | Alivia el dolor restaura tu bienestar</title>
-  <meta name="description" content="Medical Chiropractic. Atención quiropráctica profesional, valoración, planes correctivos, sintomáticos y preventivos." />
-  <style>
+  <title>Medical Chiropractic | Quiropráctica en Chimalhuacán</title>
+  <meta name="description" content="Medical Chiropractic. Alivia tu dolor, restaura tu bienestar. Atención quiropráctica profesional en Chimalhuacán." />  <style>
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background-color: #ffffff;
-      color: #1f2933;
+      background: #ffffff;
+      color: #0f172a;
     }
-    /* Animaciones suaves tipo Salud Digna */
-    .fade-in { opacity: 0; transform: translateY(16px); animation: fadeUp 0.8s ease forwards; }
+
+    /* Animaciones */
+    .fade-in { opacity: 0; transform: translateY(18px); animation: fadeUp .8s ease forwards; }
     .delay-1 { animation-delay: .1s; }
     .delay-2 { animation-delay: .2s; }
     .delay-3 { animation-delay: .3s; }
-    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }header {
-  background-color: #ffffff;
-  border-bottom: 1px solid #e5e7eb;
-  padding: 15px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-header h1 {
-  font-size: 1.2rem;
-  color: #0ea5e9;
-  margin: 0;
-}
-header a { transition: transform .2s ease, box-shadow .2s ease; }
-header a:hover { transform: translateY(-1px); box-shadow: 0 6px 14px rgba(0,0,0,.12); }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
 
-.hero {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  padding: 60px 20px;
-  background: linear-gradient(180deg,#f9fafb, #ffffff);
-}
-.hero-text { max-width: 520px; }
-.hero-text h2 { font-size: 2.2rem; color: #0f172a; }
-.hero-text p { font-size: 1.1rem; margin: 20px 0; }
-.hero-text a { display:inline-block; background-color:#0ea5e9; color:#fff; padding:14px 26px; border-radius:10px; text-decoration:none; font-weight:bold; transition: transform .2s ease, box-shadow .2s ease; }
-.hero-text a:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(14,165,233,.35); }
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 1000;
+    }
 
-section { padding: 60px 20px; max-width: 1100px; margin: auto; }
-h3 { text-align:center; font-size:1.8rem; margin-bottom:40px; }
+    nav a {
+      margin-left: 18px;
+      text-decoration: none;
+      color: #0f172a;
+      font-weight: bold;
+    }
 
-.cards { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:25px; }
-.card { border:1px solid #e5e7eb; border-radius:12px; padding:25px; text-align:center; transition: transform .25s ease, box-shadow .25s ease; }
-.card:hover { transform: translateY(-6px); box-shadow: 0 16px 30px rgba(0,0,0,.12); }
-.card h4 { color:#0ea5e9; margin-bottom:10px; }
+    .btn {
+      background: #22c55e;
+      color: #0f172a;
+      padding: 10px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-.trust { background-color:#f1f5f9; text-align:center; }
-.trust p { max-width:800px; margin:auto; font-size:1.05rem; }
+    /* Hero */
+    .hero {
+      padding: 80px 20px;
+      text-align: center;
+      background: linear-gradient(180deg, #f8fafc, #ffffff);
+    }
 
-.cta { background-color:#0f172a; color:#fff; text-align:center; padding:60px 20px; }
-.cta a { background-color:#22c55e; color:#0f172a; padding:14px 28px; border-radius:10px; text-decoration:none; font-weight:bold; display:inline-block; margin-top:20px; transition: transform .2s ease, box-shadow .2s ease; }
-.cta a:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(34,197,94,.35); }
+    .hero h1 {
+      font-size: 2.4rem;
+      margin-bottom: 18px;
+    }
 
-footer { background-color:#020617; color:#cbd5f5; text-align:center; padding:25px 15px; font-size:.9rem; }
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 720px;
+      margin: auto;
+    }
 
-  </style>
-</head>
+    .hero a {
+      display: inline-block;
+      margin-top: 30px;
+      background: #0ea5e9;
+      color: #ffffff;
+      padding: 14px 30px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 70px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 40px;
+    }
+
+    /* Servicios */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 26px;
+    }
+
+    .card {
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 26px;
+      text-align: center;
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 30px rgba(0,0,0,.12);
+    }
+
+    .card h3 { color: #0ea5e9; }
+
+    /* Beneficios */
+    .benefits {
+      background: #f1f5f9;
+      border-radius: 20px;
+      padding: 50px 20px;
+    }
+
+    .benefits ul {
+      list-style: none;
+      padding: 0;
+      max-width: 700px;
+      margin: auto;
+      font-size: 1.05rem;
+    }
+
+    .benefits li { margin: 12px 0; }
+
+    /* CTA */
+    .cta {
+      background: #0f172a;
+      color: #ffffff;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .cta a {
+      background: #22c55e;
+      padding: 14px 30px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #0f172a;
+      display: inline-block;
+      margin-top: 24px;
+    }
+
+    footer {
+      background: #020617;
+      color: #cbd5f5;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: .9rem;
+    }
+  </style></head>
 <body><header>
-  <img src="logo.png" alt="Medical Chiropractic" style="height:48px;">
-  <div style="display:flex; gap:12px; align-items:center;">
-    <a href="https://www.facebook.com/share/1Bnavyj3WD/" target="_blank" style="background:#1877f2; color:white; padding:8px 12px; border-radius:6px; text-decoration:none; font-size:0.9rem;">Facebook</a>
-    <a href="https://www.instagram.com/medical_chiropractic1?igsh=MWE3Mnk1ZzFrdmFncg==" target="_blank" style="background:#e1306c; color:white; padding:8px 12px; border-radius:6px; text-decoration:none; font-size:0.9rem;">Instagram</a>
-    <a href="https://wa.me/5215623633940?text=Hola,%20quiero%20agendar%20una%20valoración%20quiropráctica%20en%20Medical%20Chiropractic" target="_blank">Agendar cita</a>
-  </div>
+  <img src="logo.png" alt="Medical Chiropractic" style="height:48px;" />
+  <nav>
+    <a href="#servicios">Servicios</a>
+    <a href="#beneficios">Beneficios</a>
+    <a href="#ubicacion">Ubicación</a>
+    <a class="btn" href="https://wa.me/5215623633940?text=Hola,%20quiero%20agendar%20una%20valoración%20quiropráctica" target="_blank">Agendar cita</a>
+  </nav>
 </header><section class="hero fade-in">
-  <div class="hero-text">
-    <h2 class="fade-in delay-1">En Medical Chiropractic aliviamos tu dolor, restauramos tu bienestar</h2>
-    <p class="fade-in delay-2">Valoración, diagnóstico y tratamiento por licenciados en quiropráctica. Atención ética, segura y personalizada.</p>
-    <a class="fade-in delay-3" href="https://wa.me/5215623633940?text=Hola,%20quiero%20agendar%20una%20valoración%20quiropráctica%20en%20Medical%20Chiropractic" target="_blank">Agendar por WhatsApp</a>
-  </div>
-</section><section>
-  <h3>Nuestros servicios</h3>
+  <h1 class="delay-1">Alivia tu dolor, restaura tu bienestar</h1>
+  <p class="delay-2">Atención quiropráctica profesional enfocada en identificar la causa del problema, corregir desalineaciones y restaurar la función natural de tu cuerpo.</p>
+  <a class="delay-3" href="https://wa.me/5215623633940?text=Hola,%20quiero%20agendar%20una%20valoración%20quiropráctica" target="_blank">Agendar por WhatsApp</a>
+</section><section id="servicios">
+  <h2>Nuestros servicios</h2>
   <div class="cards">
-    <div class="card"><h4>Valoración Quiropráctica</h4><p>Evaluación profesional para identificar el origen del problema.</p></div>
-    <div class="card"><h4>Plan Correctivo</h4><p>Corrección de desalineaciones y restauración funcional.</p></div>
-    <div class="card"><h4>Plan Sintomático</h4><p>Alivio de dolor y molestias musculoesqueléticas.</p></div>
-    <div class="card"><h4>Plan Preventivo</h4><p>Mantenimiento de la salud de tu columna.</p></div>
-    <div class="card"><h4>Fisioterapia</h4><p>Apoyo terapéutico para acelerar la recuperación.</p></div>
+    <div class="card"><h3>Valoración Quiropráctica</h3><p>Evaluación clínica para identificar el origen del dolor.</p></div>
+    <div class="card"><h3>Plan Correctivo</h3><p>Corrección de desalineaciones y restauración funcional.</p></div>
+    <div class="card"><h3>Plan Sintomático</h3><p>Alivio de dolor y molestias musculoesqueléticas.</p></div>
+    <div class="card"><h3>Plan Preventivo</h3><p>Mantenimiento de la salud de tu columna.</p></div>
+    <div class="card"><h3>Fisioterapia</h3><p>Apoyo terapéutico para acelerar la recuperación.</p></div>
   </div>
-</section>
-  <!-- Google Maps Medical Chiropractic -->
-<section style="padding:40px; background:#f8fafc;">
-  <h2 style="text-align:center; margin-bottom:20px;">
-    📍 Nuestra ubicación
-  </h2>
-
-  <iframe
-    src="https://www.google.com/maps?q=Medical%20Chiropractic%20Chimalhuac%C3%A1n&output=embed"
-    width="100%"
-    height="350"
-    style="border:0; border-radius:12px;"
-    loading="lazy">
-  </iframe>
-
-  <div style="text-align:center; margin-top:15px;">
-    <a href="https://maps.app.goo.gl/WuHZtiehueKV42dk6"
-       target="_blank"
-       style="display:inline-block; background:#2563eb; color:white; padding:12px 20px; border-radius:8px; text-decoration:none; font-weight:bold;">
-       Ver en Google Maps
-    </a>
-  </div>
-</section>
-  <section class="cta">
-  <h3>Agenda tu valoración hoy</h3>
+</section><section id="beneficios" class="benefits">
+  <h2>Beneficios de la Quiropráctica</h2>
+  <ul>
+    <li>✔️ Alivio de dolor de espalda, cuello y articulaciones</li>
+    <li>✔️ Mejora de postura y movilidad</li>
+    <li>✔️ Corrección de desalineaciones</li>
+    <li>✔️ Atención personalizada y segura</li>
+  </ul>
+</section><section id="ubicacion">
+  <h2>Nuestra ubicación</h2>
+  <iframe src="https://www.google.com/maps?q=C.%20Amapola%20Manzana%20061%2C%20Villa%20Los%20Colorines%2C%2056343%20Chimalhuac%C3%A1n%2C%20M%C3%A9x.&output=embed" width="100%" height="360" style="border:0; border-radius:14px;" loading="lazy"></iframe>
+  <p style="text-align:center; margin-top:20px;"><a class="btn" href="https://maps.app.goo.gl/WuHZtiehueKV42dk6" target="_blank">Ver en Google Maps</a></p>
+</section><section class="cta">
+  <h2>Agenda tu valoración hoy</h2>
   <p>Da el primer paso hacia una vida con menos dolor y mayor bienestar.</p>
-  <a href="https://wa.me/5215623633940?text=Hola,%20quiero%20agendar%20una%20valoración%20quiropráctica%20en%20Medical%20Chiropractic" target="_blank">Agendar cita</a>
+  <a href="https://wa.me/5215623633940?text=Hola,%20quiero%20agendar%20una%20valoración%20quiropráctica" target="_blank">Agendar cita</a>
 </section><footer>
-  <p>📍 C. Amapola Manzana 061, Villa Los Colorines, 56343 Chimalhuacán, Méx.</p>
+  <p>📍 C. Amapola Manzana 061, Villa Los Colorines, Chimalhuacán, Méx.</p>
   <p>📞 WhatsApp: 56 23 63 39 40</p>
-  <p>
-    Síguenos en: 
-    <a href="https://www.facebook.com/share/1Bnavyj3WD/" target="_blank" style="color:#93c5fd;">Facebook</a> | 
-    <a href="https://www.instagram.com/medical_chiropractic1?igsh=MWE3Mnk1ZzFrdmFncg==" target="_blank" style="color:#f9a8d4;">Instagram</a>
-  </p>
-  <p>© 2026 Medical Chiropractic | Todos los derechos reservados</p>
-</footer>
-</body>
+  <p>© 2025 Medical Chiropractic | Todos los derechos reservados</p>
+</footer></body>
 </html>
