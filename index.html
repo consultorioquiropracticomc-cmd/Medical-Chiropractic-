@@ -346,7 +346,27 @@
       .benefit-carousel { padding: 18px 8px 26px; border-radius: 16px; }
     }
     /* === fin ULTRA NIVEL === */
+/* === FIX PARA QUE NO SE CORTE EL CARRUSEL EN CELULAR === */
+@media (max-width: 600px) {
 
+  .benefit-carousel {
+    overflow: visible !important;
+  }
+
+  .benefit-track {
+    align-items: stretch;
+  }
+
+  .benefit-slide {
+    min-height: auto !important;
+    height: auto !important;
+    box-sizing: border-box;
+  }
+
+  .benefit-slide p {
+    max-width: 100% !important;
+    line-height: 1.6;
+  }
   </style>
 </head>
 
