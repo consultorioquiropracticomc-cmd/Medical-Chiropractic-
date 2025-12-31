@@ -4,8 +4,43 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZES3RMFHN4">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZES3RMFHN4');
+</script>
+  
+  <!-- SEO LOCAL -->
   <title>Quiropráctico en Chimalhuacán | Medical Chiropractic</title>
-  <meta name="description" content="Quiropráctico en Chimalhuacán. Atención profesional, alivio de dolor y bienestar integral. Agenda tu cita hoy." />
+  <meta name="description" content="Quiropráctico en Chimalhuacán. En Medical Chiropractic aliviamos dolor de espalda, cuello y articulaciones con atención profesional y personalizada. Agenda por WhatsApp." />
+
+  <!-- SCHEMA LOCAL -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Chiropractic",
+    "name": "Medical Chiropractic",
+    "image": "logo.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "C. Amapola Manzana 061, Villa Los Colorines",
+      "addressLocality": "Chimalhuacán",
+      "addressRegion": "Estado de México",
+      "postalCode": "56343",
+      "addressCountry": "MX"
+    },
+    "telephone": "+52 56 2363 3940",
+    "sameAs": [
+      "https://www.facebook.com/share/1Bnavyj3WD/",
+      "https://www.instagram.com/medical_chiropractic1"
+    ]
+  }
+  </script>
 
   <style>
     body {
@@ -15,18 +50,114 @@
       color: #0f172a;
     }
 
+    body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('fondo.png') no-repeat center center / cover;
+  opacity: 0.3; /* 20% de opacidad */
+  z-index: -1;
+  pointer-events: none; /* para que no interfiera con clics */
+}
+
+    .fade-in { opacity: 0; transform: translateY(18px); animation: fadeUp .8s ease forwards; }
+    .delay-1 { animation-delay: .1s; }
+    .delay-2 { animation-delay: .2s; }
+    .delay-3 { animation-delay: .3s; }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 1000;
+    }
+
+    nav { display: flex; align-items: center; }
+    nav a {
+      margin-left: 18px;
+      text-decoration: none;
+      color: #0f172a;
+      font-weight: bold;
+    }
+
+    .btn {
+      background: #22c55e;
+      color: #0f172a;
+      padding: 10px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    .hero {
+      padding: 80px 20px;
+      text-align: center;
+      background: linear-gradient(180deg, #f8fafc, #ffffff);
+    }
+
+    .hero h1 { font-size: 2.4rem; margin-bottom: 18px; }
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 720px;
+      margin: auto;
+    }
+
+    .hero a {
+      display: inline-block;
+      margin-top: 30px;
+      background: #0ea5e9;
+      color: #ffffff;
+      padding: 14px 30px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
     section {
       padding: 70px 20px;
       max-width: 1100px;
       margin: auto;
     }
 
-    h2 {
-      text-align: center;
-      margin-bottom: 40px;
+    h2 { text-align: center; font-size: 2rem; margin-bottom: 40px; }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 26px;
     }
 
-    /* ================= BENEFICIOS ================= */
+    .card {
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 26px;
+      text-align: center;
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 30px rgba(0,0,0,.12);
+    }
+
+    .card h3 { color: #0ea5e9; }
 
     .benefits {
       background: #f1f5f9;
@@ -34,31 +165,103 @@
       padding: 50px 20px;
     }
 
-    .benefit-carousel {
-      position: relative;
-      max-width: 850px;
+    .benefits ul {
+      list-style: none;
+      padding: 0;
+      max-width: 700px;
       margin: auto;
-      background: rgba(255,255,255,0.85);
+      font-size: 1.05rem;
+    }
+
+    .benefits li { margin: 12px 0; }
+
+    .cta {
+      background: #0f172a;
+      color: #ffffff;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .cta a {
+      background: #22c55e;
+      padding: 14px 30px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #0f172a;
+      display: inline-block;
+      margin-top: 24px;
+    }
+
+    footer {
+      background: #020617;
+      color: #cbd5f5;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: .9rem;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 18px;
+      right: 18px;
+      background: #22c55e;
+      color: #0f172a;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      text-decoration: none;
+      box-shadow: 0 10px 25px rgba(0,0,0,.25);
+      z-index: 2000;
+    }
+
+    @media (max-width: 768px) {
+      header { flex-wrap: wrap; gap: 10px; }
+      .menu-toggle { display: block; }
+      nav {
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        margin-top: 10px;
+      }
+      nav.active { display: flex; }
+      nav a { margin: 0; }
+      .hero { padding: 50px 16px; }
+      .hero h1 { font-size: 1.8rem; }
+      .cards { grid-template-columns: 1fr; }
+    }
+
+
+    /* === ULTRA NIVEL - estilos del carrusel (agregados) === */
+    .benefit-carousel {
+      background: rgba(255,255,255,0.75);
       backdrop-filter: blur(10px);
       border-radius: 24px;
-      padding: 30px 16px 40px;
+      padding: 30px 10px 40px;
       box-shadow: 0 20px 40px rgba(0,0,0,.15);
+      max-width: 900px;
+      margin: auto;
       overflow: hidden;
     }
 
     .benefit-track {
       display: flex;
-      transition: transform .6s ease;
-      align-items: stretch;
+      transition: transform 0.6s ease;
+      will-change: transform;
     }
 
     .benefit-slide {
       min-width: 100%;
-      box-sizing: border-box;
-      padding: 26px 32px;
+      padding: 24px 28px;
       text-align: center;
       opacity: 0;
-      transform: scale(.96);
+      transform: scale(0.96);
       transition: opacity .6s ease, transform .6s ease;
     }
 
@@ -67,38 +270,50 @@
       transform: scale(1);
     }
 
+    .benefit-slide span {
+      font-size: 44px;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
     .benefit-slide h3 {
       color: #0ea5e9;
-      margin-bottom: 12px;
+      margin: 8px 0 10px;
+      font-size: 1.25rem;
     }
 
     .benefit-slide p {
       max-width: 520px;
-      margin: 0 auto 16px;
+      margin: 0 auto 10px;
       line-height: 1.6;
+      color: #07243a;
     }
 
     .benefit-cta {
       display: inline-block;
-      background: #22c55e;
+      margin-top: 14px;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
       color: #0f172a;
-      padding: 10px 24px;
+      padding: 10px 22px;
       border-radius: 999px;
-      text-decoration: none;
       font-weight: bold;
+      text-decoration: none;
+      font-size: .95rem;
     }
 
     .benefit-btn {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      background: #0ea5e9;
+      background: rgba(14,165,233,.95);
       color: #fff;
       border: none;
       font-size: 26px;
       padding: 8px 14px;
       border-radius: 50%;
       cursor: pointer;
+      z-index: 30;
+      box-shadow: 0 8px 18px rgba(3,37,65,.12);
     }
 
     .benefit-btn.prev { left: 12px; }
@@ -116,120 +331,283 @@
       background: #cbd5e1;
       margin: 6px;
       border-radius: 50%;
+      cursor: pointer;
+      transition: transform .18s ease;
     }
 
     .benefit-dots .active {
       background: #0ea5e9;
+      transform: scale(1.15);
     }
 
-    /* ========== FIX DEFINITIVO MOBILE ========== */
-    @media (max-width: 600px) {
-
-      .benefit-carousel {
-        padding: 22px 14px 32px;
-        overflow: visible; /* evita corte */
-      }
-
-      .benefit-slide {
-        padding: 22px 18px;
-        min-height: auto;
-      }
-
-      .benefit-slide p {
-        max-width: 100%;
-        font-size: 0.95rem;
-        line-height: 1.6;
-      }
-
-      .benefit-btn {
-        display: none;
-      }
+    @media(max-width:600px){
+      .benefit-btn { display:none; }
+      .benefit-slide p { padding: 0 6px; }
+      .benefit-carousel { padding: 18px 8px 26px; border-radius: 16px; }
     }
+    /* === fin ULTRA NIVEL === */
 
   </style>
 </head>
 
 <body>
 
+<header>
+  <img src="logo.png" alt="Medical Chiropractic" style="height:48px;" />
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  <nav id="menu">
+    <a href="#servicios">Servicios</a>
+    <a href="#beneficios">Beneficios</a>
+    <a href="#ubicacion">Ubicación</a>
+    <a class="btn" href="https://wa.me/5215623633940?text=Hola,%20quiero%20agendar%20una%20valoración%20quiropráctica" target="_blank">Agendar cita</a>
+  </nav>
+</header>
+
+<section class="hero fade-in">
+  <h1 class="delay-1">Alivia tu dolor, restaura tu bienestar</h1>
+  <p class="delay-2">
+    Atención quiropráctica profesional enfocada en identificar la causa del problema, corregir desalineaciones y restaurar la función natural de tu cuerpo.
+  </p>
+  <a class="delay-3" href="https://wa.me/5215623633940?text=Hola,%20quiero%20agendar%20una%20valoración%20quiropráctica" target="_blank">
+    Agendar por WhatsApp
+  </a>
+</section>
+
+<!-- TEXTO SEO LOCAL -->
+<section>
+  <p style="max-width:900px; margin:auto; font-size:1.05rem; line-height:1.6;">
+    En <strong>Medical Chiropractic</strong> somos un <strong>consultorio quiropráctico</strong> especializado en el tratamiento de dolor de espalda, cuello, columna y articulaciones.
+    Con un enfoque profesional, seguro y personalizado.
+  </p>
+</section>
+
+<section id="servicios">
+  <h2>Nuestros servicios</h2>
+  <div class="cards">
+    <div class="card"><h3>Valoración Quiropráctica</h3><p>Evaluación clínica para identificar el origen del dolor.</p></div>
+    <div class="card"><h3>Plan Correctivo</h3><p>Corrección de desalineaciones y restauración funcional.</p></div>
+    <div class="card"><h3>Plan Sintomático</h3><p>Alivio de dolor y molestias musculoesqueléticas.</p></div>
+    <div class="card"><h3>Plan Preventivo</h3><p>Mantenimiento de la salud de tu columna.</p></div>
+    <div class="card"><h3>Fisioterapia</h3><p>Apoyo terapéutico para acelerar la recuperación.</p></div>
+  </div>
+</section>
+
+<!-- ==== SECCIÓN BENEFICIOS REEMPLAZADA POR CARRUSEL ULTRA NIVEL ==== -->
 <section id="beneficios" class="benefits">
   <h2>Beneficios de la Quiropráctica</h2>
 
-  <div class="benefit-carousel">
-    <div class="benefit-track">
+  <div class="benefit-carousel" aria-roledescription="carousel">
+    <div class="benefit-track" role="list">
 
-      <div class="benefit-slide active">
+      <div class="benefit-slide active" role="listitem" aria-hidden="false">
+        <span>🦴</span>
         <h3>Alivio del Dolor</h3>
-        <p>Disminuye dolor de espalda, cuello y articulaciones de manera natural y segura.</p>
-        <a class="benefit-cta" href="https://wa.me/5215623633940" target="_blank">
-          Agenda tu valoración
+        <p>Reduce dolor de espalda, cuello, columna y articulaciones de forma natural.</p>
+        <a class="benefit-cta"
+           href="https://wa.me/5215623633940?text=Hola,%20quiero%20una%20valoración%20quiropráctica"
+           target="_blank" rel="noopener">
+           Agenda tu valoración
         </a>
       </div>
 
-      <div class="benefit-slide">
+      <div class="benefit-slide" role="listitem" aria-hidden="true">
+        <span>🧠</span>
         <h3>Sistema Nervioso</h3>
-        <p>Optimiza la comunicación entre el cerebro y el cuerpo para un mejor funcionamiento.</p>
-        <a class="benefit-cta" href="https://wa.me/5215623633940" target="_blank">
-          Agenda tu valoración
+        <p>Mejora la comunicación entre cerebro y cuerpo para un mejor funcionamiento.</p>
+        <a class="benefit-cta"
+           href="https://wa.me/5215623633940?text=Hola,%20quiero%20una%20valoración%20quiropráctica"
+           target="_blank" rel="noopener">
+           Agenda tu valoración
         </a>
       </div>
 
-      <div class="benefit-slide">
+      <div class="benefit-slide" role="listitem" aria-hidden="true">
+        <span>🤸‍♂️</span>
         <h3>Movilidad y Postura</h3>
-        <p>Mejora tu flexibilidad, postura y calidad de movimiento.</p>
-        <a class="benefit-cta" href="https://wa.me/5215623633940" target="_blank">
-          Agenda tu valoración
+        <p>Aumenta flexibilidad, corrige postura y reduce rigidez articular.</p>
+        <a class="benefit-cta"
+           href="https://wa.me/5215623633940?text=Hola,%20quiero%20una%20valoración%20quiropráctica"
+           target="_blank" rel="noopener">
+           Agenda tu valoración
         </a>
       </div>
 
-      <div class="benefit-slide">
+      <div class="benefit-slide" role="listitem" aria-hidden="true">
+        <span>💪</span>
         <h3>Prevención</h3>
         <p>Evita recaídas, lesiones repetitivas y sobrecargas musculares.</p>
-        <a class="benefit-cta" href="https://wa.me/5215623633940" target="_blank">
-          Agenda tu valoración
+        <a class="benefit-cta"
+           href="https://wa.me/5215623633940?text=Hola,%20quiero%20una%20valoración%20quiropráctica"
+           target="_blank" rel="noopener">
+           Agenda tu valoración
         </a>
       </div>
 
     </div>
 
-    <button class="benefit-btn prev">‹</button>
-    <button class="benefit-btn next">›</button>
-    <div class="benefit-dots"></div>
+    <button class="benefit-btn prev" aria-label="Anterior">‹</button>
+    <button class="benefit-btn next" aria-label="Siguiente">›</button>
+
+    <div class="benefit-dots" role="tablist" aria-label="Indicadores del carrusel"></div>
+  </div>
+</section>
+<!-- ==== fin sección beneficios ==== -->
+
+<section id="ubicacion" style="padding:40px; background:#f8fafc;">
+  <h2>📍 ubicación 🇲🇽</h2>
+
+  <iframe
+    src="https://www.google.com/maps?q=Medical%20Chiropractic%20Chimalhuac%C3%A1n&output=embed"
+    width="100%"
+    height="350"
+    style="border:0; border-radius:12px;"
+    loading="lazy">
+  </iframe>
+
+  <div style="text-align:center; margin-top:15px;">
+    <a href="https://maps.app.goo.gl/WuHZtiehueKV42dk6"
+       target="_blank"
+       style="display:inline-block; background:#2563eb; color:white; padding:12px 20px; border-radius:8px; text-decoration:none; font-weight:bold;">
+       Ver en Google Maps
+    </a>
   </div>
 </section>
 
+<section class="cta">
+  <h3>Agenda tu valoración hoy</h3>
+  <p>Da el primer paso hacia una vida con menos dolor y mayor bienestar.</p>
+  <a href="https://wa.me/5215623633940?text=Hola,%20quiero%20agendar%20una%20valoración%20quiropráctica%20en%20Medical%20Chiropractic" target="_blank">
+    Agendar cita
+  </a>
+</section>
+
+<footer>
+  <p>
+    Medical Chiropractic – C. Amapola Manzana 061, Villa Los Colorines, 56343 Chimalhuacán, Méx.<br>
+    Dispensario medico San Francisco de Asis Vicente Villada, Nezahualcóyotl.
+  </p>
+  <p>📞 WhatsApp: 56 23 63 39 40</p>
+  <p>
+    <a href="https://www.facebook.com/share/1Bnavyj3WD/" target="_blank" style="color:#93c5fd;">Facebook</a> |
+    <a href="https://www.instagram.com/medical_chiropractic1?igsh=MWE3Mnk1ZzFrdmFncg==" target="_blank" style="color:#f9a8d4;">Instagram</a>
+  </p>
+  <p>© 2026 Medical Chiropractic | Todos los derechos reservados</p>
+</footer>
+
+<a href="https://wa.me/5215623633940" class="whatsapp-float" target="_blank">💬</a>
+
 <script>
-  const track = document.querySelector('.benefit-track');
-  const slides = document.querySelectorAll('.benefit-slide');
-  const prev = document.querySelector('.prev');
-  const next = document.querySelector('.next');
-  const dotsContainer = document.querySelector('.benefit-dots');
-
-  let index = 0;
-
-  slides.forEach((_, i) => {
-    const dot = document.createElement('span');
-    if (i === 0) dot.classList.add('active');
-    dot.onclick = () => goTo(i);
-    dotsContainer.appendChild(dot);
-  });
-
-  const dots = document.querySelectorAll('.benefit-dots span');
-
-  function goTo(i) {
-    slides[index].classList.remove('active');
-    dots[index].classList.remove('active');
-
-    index = i;
-    track.style.transform = `translateX(-${index * 100}%)`;
-
-    slides[index].classList.add('active');
-    dots[index].classList.add('active');
+  function toggleMenu() {
+    document.getElementById("menu").classList.toggle("active");
   }
+</script>
 
-  next.onclick = () => goTo((index + 1) % slides.length);
-  prev.onclick = () => goTo((index - 1 + slides.length) % slides.length);
+<!-- === JS ULTRA NIVEL DEL CARRUSEL: fade + slide + swipe + pausa === -->
+<script>
+  (function(){
+    const track = document.querySelector('.benefit-track');
+    const slides = Array.from(document.querySelectorAll('.benefit-slide'));
+    const prevBtn = document.querySelector('.benefit-btn.prev');
+    const nextBtn = document.querySelector('.benefit-btn.next');
+    const dotsContainer = document.querySelector('.benefit-dots');
 
-  setInterval(() => next.click(), 5000);
+    if(!track || slides.length === 0) return;
+
+    let index = 0;
+    let startX = 0;
+    let autoSlide;
+
+    // Crear dots
+    slides.forEach((_, i) => {
+      const dot = document.createElement('span');
+      dot.setAttribute('role','button');
+      dot.setAttribute('aria-label','Ir al slide ' + (i+1));
+      if (i === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => goTo(i));
+      dotsContainer.appendChild(dot);
+    });
+
+    const dots = Array.from(dotsContainer.querySelectorAll('span'));
+
+    function updateAria() {
+      slides.forEach((s, i) => {
+        s.setAttribute('aria-hidden', i === index ? 'false' : 'true');
+      });
+    }
+
+    function goTo(i) {
+      // quitar active anterior
+      slides[index].classList.remove('active');
+      dots[index].classList.remove('active');
+
+      index = i;
+
+      // mover track
+      track.style.transform = `translateX(-${index * 100}%)`;
+
+      // activar actual
+      slides[index].classList.add('active');
+      dots[index].classList.add('active');
+
+      updateAria();
+    }
+
+    nextBtn.addEventListener('click', () => goTo((index + 1) % slides.length));
+    prevBtn.addEventListener('click', () => goTo((index - 1 + slides.length) % slides.length));
+
+    function startAuto(){
+      stopAuto();
+      autoSlide = setInterval(() => {
+        nextBtn.click();
+      }, 5000);
+    }
+
+    function stopAuto(){
+      if (autoSlide) clearInterval(autoSlide);
+    }
+
+    // pausa on hover (desktop)
+    track.addEventListener('mouseenter', stopAuto);
+    track.addEventListener('mouseleave', startAuto);
+
+    // swipe touch
+    track.addEventListener('touchstart', e => {
+      stopAuto();
+      startX = e.touches[0].clientX;
+    }, {passive: true});
+
+    track.addEventListener('touchend', e => {
+      const endX = e.changedTouches[0].clientX;
+      if (startX - endX > 50) nextBtn.click();
+      if (endX - startX > 50) prevBtn.click();
+      startAuto();
+    });
+
+    // incia autoslide
+    startAuto();
+
+    // mejora: paused when user focuses any CTA inside slide
+    const ctas = document.querySelectorAll('.benefit-cta');
+    ctas.forEach(cta => {
+      cta.addEventListener('focus', stopAuto);
+      cta.addEventListener('blur', startAuto);
+      cta.addEventListener('mouseenter', stopAuto);
+      cta.addEventListener('mouseleave', startAuto);
+    });
+
+    // ensure initial state
+    track.style.transform = `translateX(0)`;
+    slides.forEach((s, i) => {
+      if(i === 0) {
+        s.classList.add('active');
+        s.setAttribute('aria-hidden','false');
+      } else {
+        s.classList.remove('active');
+        s.setAttribute('aria-hidden','true');
+      }
+    });
+
+  })();
 </script>
 
 </body>
