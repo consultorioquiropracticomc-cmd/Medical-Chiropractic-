@@ -367,6 +367,35 @@
     max-width: 100% !important;
     line-height: 1.6;
   }
+  /* ================= MOBILE CON FONDO VISIBLE ================= */
+@media (max-width: 768px) {
+
+  /* Fondo visible pero suave */
+  body::before {
+    opacity: 0.12;           /* antes muy fuerte */
+    filter: blur(1.5px);     /* suaviza sin perder imagen */
+    background-position: top center;
+  }
+
+  /* Secciones legibles con efecto médico */
+  section {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 16px;
+  }
+
+  /* Carrusel sin cortes */
+  .benefit-carousel {
+    overflow: visible !important;
+  }
+
+  .benefit-slide {
+    height: auto !important;
+    min-height: auto !important;
+  }
+
+}
   </style>
 </head>
 
