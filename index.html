@@ -342,22 +342,18 @@
       transform: scale(1.15);
     }
 
-/* 🔒 Corrección definitiva de centrado del carrusel */
-.benefit-track {
-  justify-content: center;
-}
-
+/* ✅ Centrado correcto del contenido SIN romper el carrusel */
 .benefit-slide {
   box-sizing: border-box;
-  margin: 0 auto;
-}
-
-.benefit-slide > * {
-  margin-left: auto;
-  margin-right: auto;
   text-align: center;
 }
-    }
+
+.benefit-slide h3,
+.benefit-slide p,
+.benefit-slide a {
+  margin-left: auto;
+  margin-right: auto;
+}
     /* === fin ULTRA NIVEL === */
     
   </style>
