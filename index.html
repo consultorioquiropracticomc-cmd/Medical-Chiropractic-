@@ -342,26 +342,32 @@
       transform: scale(1.15);
     }
 
-    @media(max-width:600px){
-      .benefit-btn { display:none; }
-      .benefit-slide p { padding: 0 6px; }
-      .benefit-carousel { padding: 18px 8px 26px; border-radius: 16px; }
-
-      .carousel-item {
-  text-align: center;
-}
-
-.carousel-item h3,
-.carousel-item p {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .carousel-item .btn {
   display: inline-block;
 }
     }
+
+@media (max-width: 600px) {
+
+  .benefit-track {
+    align-items: center;
+  }
+
+  .benefit-slide {
+    box-sizing: border-box;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .benefit-slide h3,
+  .benefit-slide p,
+  .benefit-slide a {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
     /* === fin ULTRA NIVEL === */
     
   </style>
