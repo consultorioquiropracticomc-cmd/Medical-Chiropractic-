@@ -342,26 +342,20 @@
       transform: scale(1.15);
     }
 
-@media (max-width: 600px) {
+/* 🔒 Corrección definitiva de centrado del carrusel */
+.benefit-track {
+  justify-content: center;
+}
 
-  .benefit-track {
-    align-items: center;
-  }
+.benefit-slide {
+  box-sizing: border-box;
+  margin: 0 auto;
+}
 
-  .benefit-slide {
-    box-sizing: border-box;
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-
-  .benefit-slide h3,
-  .benefit-slide p,
-  .benefit-slide a {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
+.benefit-slide > * {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
     /* === fin ULTRA NIVEL === */
     
