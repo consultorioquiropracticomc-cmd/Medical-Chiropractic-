@@ -371,15 +371,49 @@
   margin-left: auto;
   margin-right: auto;
 }
-    /* === fin ULTRA NIVEL === */
     
+    /* === fin ULTRA NIVEL === */
+    /* === BOTÓN FLOTANTE TESTIMONIOS === */
+.testimonios-float {
+  position: fixed;
+  bottom: 90px; /* arriba del WhatsApp */
+  right: 18px;
+  background: #0ea5e9;
+  color: #ffffff;
+  padding: 12px 18px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.25);
+  z-index: 1999;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.testimonios-float:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(0,0,0,.35);
+}
+
+@media (max-width: 600px) {
+  .testimonios-float {
+    font-size: 13px;
+    padding: 10px 16px;
+    bottom: 86px;
+  }
+}
   </style>
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
 <link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
 <link rel="apple-touch-icon" href="favicon.png">
 </head>
-  
+  <a href="testimonios.html" class="testimonios-float">
+  ⭐ Testimonios
+</a>
 <body>
   
 <header>
