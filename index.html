@@ -405,21 +405,6 @@
     bottom: 86px;
   }
 }
-    /* === OCULTAR BOTONES AL LLEGAR AL FOOTER === */
-.floating-buttons {
-  position: fixed;
-  right: 18px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 2000;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.floating-buttons.hide {
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(-50%) scale(0.95);
-}
   </style>
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
@@ -571,43 +556,17 @@
   </p>
   <p>© 2026 Medical Chiropractic | Todos los derechos reservados</p>
 </footer>
-<div class="floating-buttons" id="floatingButtons">
-  <a href="testimonios.html" class="testimonios-float">
-    ⭐ Testimonios
-  </a>
-  <a href="https://wa.me/5215623633940" class="whatsapp-float" target="_blank">
-    💬
-  </a>
-</div>
+<a href="testimonios.html" class="testimonios-float">
+  ⭐ Testimonios
+</a>
+<a href="https://wa.me/5215623633940" class="whatsapp-float" target="_blank">💬</a>
 
 <script>
   function toggleMenu() {
     document.getElementById("menu").classList.toggle("active");
   }
 </script>
-<script>
-  (function () {
-    const floating = document.getElementById('floatingButtons');
-    const footer = document.querySelector('footer');
 
-    if (!floating || !footer) return;
-
-    function checkFooterOverlap() {
-      const footerRect = footer.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-
-      if (footerRect.top < windowHeight - 80) {
-        floating.classList.add('hide');
-      } else {
-        floating.classList.remove('hide');
-      }
-    }
-
-    window.addEventListener('scroll', checkFooterOverlap);
-    window.addEventListener('resize', checkFooterOverlap);
-    checkFooterOverlap();
-  })();
-</script>
 <!-- === JS ULTRA NIVEL DEL CARRUSEL: fade + slide + swipe + pausa === -->
 <script>
   (function(){
