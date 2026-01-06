@@ -181,6 +181,62 @@
         grid-template-columns: repeat(3, 1fr);
       }
     }
+
+    /* ===== CAJA CUENTANOS TU CASO ===== */
+.consulta {
+  max-width: 720px;
+  margin: 0 auto 90px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.consulta h2 {
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  margin-bottom: 10px;
+}
+
+.consulta p {
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 26px;
+}
+
+.consulta-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.consulta-form input,
+.consulta-form textarea {
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.consulta-form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.consulta-form button {
+  background: #22c55e;
+  color: #0f172a;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  padding: 14px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.consulta-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0,0,0,.2);
+}
   </style>
   <link rel="icon" type="image/png" href="favicon.png">
 </head>
@@ -218,7 +274,19 @@
     <iframe src="https://www.youtube.com/embed/nncMclSLyoU?si=P7qO-5zJnAt8hiYX" allowfullscreen></iframe>
   </div>
 </section>
+<section class="consulta">
+  <h2>Cuéntanos tu caso</h2>
+  <p>
+    Describe tu dolor o problema y dinos desde cuándo lo tienes.
+    Te diremos si la quiropráctica puede ayudarte.
+  </p>
 
+  <form class="consulta-form" onsubmit="enviarCaso(event)">
+    <input type="text" id="nombre" placeholder="Tu nombre (opcional)">
+    <textarea id="caso" placeholder="Describe tu dolor, molestias o diagnóstico..." required></textarea>
+    <button type="submit">Enviar mi caso</button>
+  </form>
+</section>
 <section class="cta">
   <h3>¿Quieres ser el próximo testimonio?</h3>
   <p>Agenda tu valoración quiropráctica hoy mismo.</p>
@@ -241,4 +309,20 @@
 </footer>
 
 </body>
+  <script>
+  function enviarCaso(e) {
+    e.preventDefault();
+
+    const nombre = document.getElementById('nombre').value || 'Paciente';
+    const caso = document.getElementById('caso').value;
+
+    const mensaje =
+      `Hola, soy ${nombre}. Quisiera saber si pueden ayudarme con este caso:\n\n${caso}`;
+
+    const url =
+      `https://wa.me/5215623633940?text=${encodeURIComponent(mensaje)}`;
+
+    window.open(url, '_blank');
+  }
+</script>
 </html>
