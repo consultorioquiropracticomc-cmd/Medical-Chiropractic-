@@ -647,11 +647,18 @@
 </ul>
 
     <a
-      href="https://wa.me/5215623633940?text=Hola,%20quiero%20aprovechar%20la%20promoci%C3%B3n%20de%20valoraci%C3%B3n%20y%20solicitar%20datos%20de%20transferencia%20o%20link%20de%20pago"
-      target="_blank"
-      class="promo-btn">
-      Solicitar datos de pago por WhatsApp
-    </a>
+  href="https://wa.me/5215623633940?text=Hola,%20quiero%20aprovechar%20la%20promoci%C3%B3n%20de%20valoraci%C3%B3n%20y%20solicitar%20datos%20de%20transferencia%20o%20link%20de%20pago"
+  target="_blank"
+  class="promo-btn"
+  onclick="
+    gtag('event','conversion',{
+      'send_to':'AW-17831941789',
+      'event_category':'Agenda',
+      'event_label':'Promo valoracion prepago'
+    });
+  ">
+  Apartar mi valoración con descuento
+</a>
   </div>
 </section>
 <!-- === FIN NUEVO APARTADO === -->
