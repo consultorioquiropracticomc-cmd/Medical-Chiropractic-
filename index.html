@@ -480,14 +480,19 @@
     padding-top: 140%;
   }
 }
-    @media (max-width: 768px) {
+    /* === FIX DEFINITIVO GOOGLE CALENDAR EN CELULAR === */
+@media (max-width: 768px) {
   .agenda-wrapper {
-    height: 90vh;
+    height: 80vh;          /* altura fija visible */
     padding-top: 0;
+    overflow-y: auto;      /* 🔑 permite desplazarse */
+    -webkit-overflow-scrolling: touch; /* scroll suave en iOS */
   }
 
   .agenda-wrapper iframe {
-    height: 100%;
+    height: 1200px;        /* altura interna grande */
+    width: 100%;
+    border: 0;
   }
 }
   </style>
