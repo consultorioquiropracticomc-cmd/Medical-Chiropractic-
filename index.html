@@ -414,6 +414,72 @@
     bottom: 86px;
   }
 }
+    /* === ESTILOS AGENDA Y PROMOCIONES === */
+.agenda-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 75%;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,.15);
+  background: #ffffff;
+}
+
+.agenda-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.promo-box {
+  margin-top: 40px;
+  background: linear-gradient(135deg, #f0f9ff, #ecfeff);
+  border: 1px solid #bae6fd;
+  border-radius: 22px;
+  padding: 30px 24px;
+  text-align: center;
+  box-shadow: 0 18px 36px rgba(14,165,233,.18);
+}
+
+.promo-box h3 {
+  color: #0ea5e9;
+  margin-bottom: 16px;
+}
+
+.promo-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 22px;
+  font-size: 1.05rem;
+}
+
+.promo-box li {
+  margin: 10px 0;
+}
+
+.promo-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: #0f172a;
+  padding: 14px 28px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.promo-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(34,197,94,.35);
+}
+
+@media (max-width: 768px) {
+  .agenda-wrapper {
+    padding-top: 140%;
+  }
+}
   </style>
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
@@ -525,6 +591,39 @@
 </section>
 <!-- ==== fin sección beneficios ==== -->
 
+  <!-- === NUEVO APARTADO: AGENDA TU CITA === -->
+<section id="agenda" style="padding:70px 20px; max-width:1100px; margin:auto;">
+  <h2>Agenda tu valoración</h2>
+
+  <p style="text-align:center; max-width:800px; margin:0 auto 30px; font-size:1.05rem; line-height:1.6;">
+    Consulta los <strong>horarios disponibles</strong> y agenda tu valoración quiropráctica de forma rápida y segura.
+  </p>
+
+  <div class="agenda-wrapper">
+    <iframe
+      src="https://calendar.app.google/FVyntzZcvqNrjv2FA"
+      frameborder="0"
+      scrolling="no"
+      loading="lazy">
+    </iframe>
+  </div>
+
+  <div class="promo-box">
+    <h3>🎉 Promociones exclusivas en línea</h3>
+    <ul>
+      <li><strong>15% de descuento</strong> al reservar tu valoración desde esta página.</li>
+      <li><strong>20% de descuento</strong> al realizar <strong>prepago</strong> de tu consulta de valoración.</li>
+    </ul>
+
+    <a
+      href="https://wa.me/5215623633940?text=Hola,%20quiero%20aprovechar%20la%20promoci%C3%B3n%20de%20valoraci%C3%B3n%20y%20solicitar%20datos%20de%20transferencia%20o%20link%20de%20pago"
+      target="_blank"
+      class="promo-btn">
+      Solicitar datos de pago por WhatsApp
+    </a>
+  </div>
+</section>
+<!-- === FIN NUEVO APARTADO === -->
 <section id="ubicacion" style="padding:40px; background:#f8fafc;">
   <h2>📍 ubicación 🇲🇽</h2>
 
